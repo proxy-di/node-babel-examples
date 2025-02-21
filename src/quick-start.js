@@ -11,8 +11,8 @@ class Agent007 {
 }
 
 const container = new ProxyDiContainer();
-container.newDependency(Agent007, "Role");
-container.newDependency(Actor, "Actor");
+container.registerDependency(Agent007, "Role");
+container.registerDependency(Actor, "Actor");
 
 const actor = container.resolve("Actor");
 console.log(actor.play());
